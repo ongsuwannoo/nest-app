@@ -15,13 +15,11 @@ export class CatsController {
 
   @Get()
   findAll() {
-    console.log('findAll');
     return this.catsService.findAll();
   }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<Cat> {
-    console.log('findOne');
     return this.catsService.findOne(id);
   }
 
